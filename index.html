@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Kaiser Travis Chan">
+  <meta name="description" content="A utility calculator">
+  <meta name="keywords" content="PSHS-MC, CS3, Q3G3, meta, favicon">
+  <title>Calculator!</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+  <header id="header"> </header>
+
+  <div id="calculator">
+    <input class="textview" id="textview" disabled>
+    <button onclick="insert('(')"> ( </button>
+    <button onclick="insert(')')"> ) </button>
+    <button onclick="insert(',')"> , </button>
+    <button onclick="insert('**')"> ** </button>
+    <button onclick="insert('log')"> log </button>
+    <button onclick="insert('sin')"> sin </button>
+    <button onclick="insert('cos')"> cos </button>
+    <button onclick="insert('tan')"> tan </button>
+    <button onclick="insert('abs')"> abs </button>
+    <button onclick="insert('pi')"> pi </button>
+    <button onclick="insert('e')"> e </button>
+    <button onclick="insert('E')"> E </button>
+    <button onclick="insert('7')"> 7 </button>
+    <button onclick="insert('8')"> 8 </button>
+    <button onclick="insert('9')"> 9 </button>
+    <button onclick="insert('+')"> + </button>
+    <button onclick="insert('4')"> 4 </button>
+    <button onclick="insert('5')"> 5 </button>
+    <button onclick="insert('6')"> 6 </button>
+    <button onclick="insert('-')"> - </button>
+    <button onclick="insert('1')"> 1 </button>
+    <button onclick="insert('2')"> 2 </button>
+    <button onclick="insert('3')"> 3 </button>
+    <button onclick="insert('*')"> * </button>
+    <button onclick="insert('0')"> 0 </button>
+    <button onclick="insert('.')"> . </button>
+    <button onclick="back()"> < </button>
+    <button onclick="insert('/')"> / </button>
+    <button onclick="clean()" style="width:100px; margin:8px;"> C </button>
+    <button onclick="equal()" style="width:100px; margin:8px;"> = </button>
+  </div>
+  
+  <h2>Documentation</h2>
+
+  <dl>
+    <dt>log(b,x)</dt>
+    <dd>Returns the value of $\log_b x$.</dd>
+    <dt>sin(x), cos(x), tan(x)</dt>
+    <dd>Returns the value of $\sin x$, $\cos x$, $\tan x$, respectively, where $x$ is in radians.</dd>
+    <dt>abs(x)</dt>
+    <dd>Returns the value of $|x|$.</dd>
+    <dt>**</dt>
+    <dd>Exponentiation.</dd>
+    <dt>E</dt>
+    <dd>Scientific notation, e.g. $\texttt{1E3} = 1000$.</dd>
+  </dl>
+
+  <script defer src="script.js"></script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+</body>
+
+</html>
